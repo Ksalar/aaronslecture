@@ -1,0 +1,30 @@
+SET sql_mode = 'NO_BACKSLASH_ESCAPES';
+
+DROP DATABASE IF EXISTS yelp;
+
+CREATE DATABASE yelp;
+
+USE yelp;
+
+CREATE TABLE restaurants (
+	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	name VARCHAR(255) UNIQUE,
+	rating VARCHAR(255),
+	price VARCHAR(5),
+	phone VARCHAR(15),
+	latitude DECIMAL(11,8),
+	longitude DECIMAL(11,8)
+);	
+
+CREATE TABLE categories (
+	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	name VARCHAR(255) UNIQUE
+);
+
+CREATE TABLE restaurant_categories (
+	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	restaurant_id INTEGER NOT NULL,
+	category_id INTEGER NOT NULL,
+	FOREIGN KEY (restaurant_id) REFERENCES restaurants(id),
+	FOREIGN KEY (category_id) REFERENCES categories(id)
+	);

@@ -1,0 +1,3 @@
+module.exports = {
+	yelpAPI : 'ekGvIvDBQTHe83rYZ_iCWRoNa1Lmne-nZietmAWAzKkBuODqFIURoYTevX_oHX3yB_NC8c4gro22OQPlPfk2SUPWZ58OUjloSqpQU7scQaYlvbDYHW6uHOLsyNKJWnYx'
+}
